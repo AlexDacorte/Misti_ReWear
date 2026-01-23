@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react()],
-  base: "/Misti_ReWear/",
+  base: "/Misti_ReWear",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
