@@ -6,7 +6,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-foreground text-background py-12 border-t-4 border-background relative overflow-hidden">
-      {/* Animated background pattern */}
       <motion.div 
         className="absolute inset-0 opacity-5"
         style={{

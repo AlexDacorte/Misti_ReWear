@@ -43,7 +43,6 @@ html {
 
     --radius: 0;
 
-    /* Brutalist tokens */
     --border-thick: 3px solid hsl(0 0% 5%);
     --border-brutal: 4px solid hsl(0 0% 5%);
     --shadow-brutal: 6px 6px 0px hsl(0 0% 5%);
@@ -159,7 +158,6 @@ html {
     box-shadow: 2px 2px 0px hsl(var(--foreground));
   }
 
-  /* Glitch Text Effect - Subtle version */
   .glitch {
     position: relative;
   }
@@ -188,7 +186,6 @@ html {
     transform: translate(1px, 1px);
   }
 
-  /* Scanline effect */
   .scanlines::after {
     content: '';
     position: absolute;
@@ -207,7 +204,6 @@ html {
     animation: scanlines 8s linear infinite;
   }
 
-  /* Noise overlay */
   .noise::before {
     content: '';
     position: absolute;
@@ -221,7 +217,6 @@ html {
     animation: noise 0.2s steps(10) infinite;
   }
 
-  /* Shake animation */
   .shake {
     animation: shake 0.5s ease-in-out;
   }
@@ -230,32 +225,26 @@ html {
     animation: shake 0.1s ease-in-out infinite;
   }
 
-  /* Jitter on hover - subtle */
   .jitter:hover {
     animation: jitter 0.4s ease-in-out;
   }
 
-  /* Flicker - subtle, only on hover */
   .flicker-hover:hover {
     animation: flicker-subtle 1s linear;
   }
 
-  /* RGB Split hover */
   .rgb-split:hover {
     animation: rgb-split 0.4s ease-in-out;
   }
 
-  /* Brutal bounce */
   .brutal-bounce {
     animation: brutal-bounce 0.5s ease-in-out;
   }
 
-  /* Distort on hover */
   .distort:hover {
     animation: distort 0.3s ease-in-out;
   }
 
-  /* Marquee */
   .marquee {
     animation: marquee 20s linear infinite;
   }
@@ -277,7 +266,6 @@ html {
   }
 }
 
-/* Keyframes */
 @keyframes glitch-effect {
   0% {
     transform: translate(0);

@@ -9,7 +9,6 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 scanlines noise"
     >
-      {/* Background Image with Brutalist overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
@@ -17,20 +16,17 @@ const Hero = () => {
           className="w-full h-full object-cover grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-background/85" />
-        {/* Decorative grid pattern */}
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'repeating-linear-gradient(0deg, hsl(var(--foreground)) 0px, hsl(var(--foreground)) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, hsl(var(--foreground)) 0px, hsl(var(--foreground)) 1px, transparent 1px, transparent 40px)'
         }} />
       </div>
 
-      {/* Marquee banner */}
       <div className="absolute top-20 left-0 right-0 bg-primary border-y-4 border-foreground py-2 overflow-hidden z-20">
         <div className="marquee whitespace-nowrap font-mono text-primary-foreground font-bold">
           ★ ROPA VINTAGE ★ SEGUNDA MANO ★ AREQUIPA ★ MODA SOSTENIBLE ★ PIEZAS ÚNICAS ★ ROPA VINTAGE ★ SEGUNDA MANO ★ AREQUIPA ★ MODA SOSTENIBLE ★ PIEZAS ÚNICAS ★
         </div>
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 relative z-10 mt-16 md:mt-12">
         <div className="max-w-4xl mx-auto text-center md:text-left">
           <motion.div
@@ -125,7 +121,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

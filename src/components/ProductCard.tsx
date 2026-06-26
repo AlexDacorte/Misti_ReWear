@@ -40,7 +40,6 @@ const ProductCard = ({
       }}
       className="group bg-card border-3 border-foreground shadow-brutal hover:shadow-brutal-hover transition-all relative overflow-hidden"
     >
-      {/* Glitch overlay on hover */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10 transition-opacity">
         <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
       </div>
@@ -68,7 +67,6 @@ const ProductCard = ({
           </motion.span>
         </div>
         
-        {/* Scan line effect on hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" style={{
           background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px)'
         }} />

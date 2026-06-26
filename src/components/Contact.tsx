@@ -30,7 +30,6 @@ const Contact = () => {
 
   return (
     <section id="contacto" className="py-20 md:py-32 bg-muted relative overflow-hidden">
-      {/* Decorative elements */}
       <motion.div 
         className="absolute top-10 left-10 text-6xl font-display text-foreground/5 hidden lg:block"
         animate={{ x: [0, 10, 0] }}
@@ -64,7 +63,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -118,7 +116,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* WhatsApp CTA */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -127,7 +124,6 @@ const Contact = () => {
             whileHover={{ x: -4, y: -4 }}
             className="bg-card border-3 border-foreground p-8 shadow-brutal hover:shadow-brutal-hover transition-shadow flex flex-col items-center justify-center text-center relative overflow-hidden"
           >
-            {/* Animated background pattern */}
             <div className="absolute inset-0 opacity-5">
               <motion.div
                 className="absolute inset-0"

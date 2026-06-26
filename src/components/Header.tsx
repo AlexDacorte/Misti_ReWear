@@ -2,7 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Icon from "@/assets/icon.svg"
+import { HashLink as Link } from "react-router-hash-link";
+import Icon from "@/assets/icon.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,12 +19,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b-4 border-foreground">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <motion.a 
-            href="#inicio" 
+          <motion.a
+            href="#inicio"
             className="flex items-center gap-2 group"
             whileHover={{ x: -2 }}
           >
-            <motion.div 
+            <motion.div
               className="w-10 h-10 bg-primary border-3 border-foreground flex items-center justify-center shadow-brutal-sm group-hover:shadow-brutal transition-all"
               whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -35,35 +36,38 @@ const Header = () => {
             </span>
           </motion.a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                className="font-mono text-sm font-bold text-foreground hover:text-primary transition-colors relative"
-                whileHover={{ y: -2 }}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                {link.name}
-                <motion.span 
-                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary origin-left"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.2 }}
-                />
-              </motion.a>
+              <Link smoth to={link.href} key={link.name}>
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  className="font-mono text-sm font-bold text-foreground hover:text-primary transition-colors relative"
+                  whileHover={{ y: -2 }}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  {link.name}
+                  <motion.span
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </motion.a>
+              </Link>
             ))}
             <motion.div whileHover={{ x: -2, y: -2 }} whileTap={{ x: 1, y: 1 }}>
-              <Button asChild className="border-3 border-foreground shadow-brutal-sm transition-all">
+              <Button
+                asChild
+                className="border-3 border-foreground shadow-brutal-sm transition-all"
+              >
                 <a href="#contacto">WHATSAPP</a>
               </Button>
             </motion.div>
           </nav>
 
-          {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden p-2 border-3 border-foreground bg-card shadow-brutal-sm transition-all"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -97,10 +101,9 @@ const Header = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.nav 
+            <motion.nav
               className="md:hidden py-4 border-t-3 border-foreground"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
@@ -127,7 +130,10 @@ const Header = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <Button asChild className="w-full mt-2 border-3 border-foreground shadow-brutal-sm">
+                  <Button
+                    asChild
+                    className="w-full mt-2 border-3 border-foreground shadow-brutal-sm"
+                  >
                     <a href="#contacto">WHATSAPP</a>
                   </Button>
                 </motion.div>
