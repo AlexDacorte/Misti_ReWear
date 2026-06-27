@@ -3,10 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HashLink as Link } from "react-router-hash-link";
+import { MouseEvent } from "react";
 import Icon from "@/assets/icon.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleScroll = (e: MouseEvent, targetId) => {
+    e.preventDefault();
+
+    const section = document.querySelector(`#${targetId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const navLinks = [
     { name: "INICIO", href: "#inicio" },
